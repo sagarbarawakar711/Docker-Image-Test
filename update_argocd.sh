@@ -19,5 +19,5 @@ git config --global user.name "Sagar.Barawakar"
 git add deployment.yaml
 git commit -m "Updated image to latest"
 echo connecting to repo
-git remote add origin https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git
+git remote set-url origin https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git
 git push origin main
