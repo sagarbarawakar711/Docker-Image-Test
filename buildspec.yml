@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t argocd-repo . .
+      - docker build -t argocd-repo . 
       - docker tag argocd-repo:latest 461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest
   post_build:
     commands:
