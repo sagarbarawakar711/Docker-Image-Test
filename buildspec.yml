@@ -20,6 +20,7 @@ phases:
       - printf '[{"name":"nginx-repo","imageUri":"%s"}]' 461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest > imagedefinitions.json
       - echo Updating ArgoCD GitOps repository...
       - git clone https://github.com/sagarbarawakar711/ArgoCD-Repo.git
+      - cd ArgoCD-Repo
       - sed -i "s|image: .*|image: 461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest|" deployment.yaml
       - git config --global user.email "sagarbarawakar1993@gmail.com"
       - git config --global user.name "Sagar.Barawakar"
