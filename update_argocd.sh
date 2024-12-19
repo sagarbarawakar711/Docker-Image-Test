@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-REPO_URL="https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git"
+REPO_URL="https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git"
 IMAGE_TAG="461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest"
 
 # Clone the ArgoCD repository
