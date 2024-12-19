@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-REPO_URL="https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git"
+REPO_URL="https://github.com/sagarbarawakar711/ArgoCD-Repo.git"
 IMAGE_TAG="461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest"
 
 # Clone the ArgoCD repository
@@ -19,4 +19,5 @@ git config --global user.name "Sagar.Barawakar"
 git add deployment.yaml
 git commit -m "Updated image to latest"
 echo connecting to repo
+git remote set-url origin https://sagarbarawakar711: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@github.com/sagarbarawakar711/ArgoCD-Repo.git
 git push origin main
