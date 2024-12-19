@@ -18,6 +18,7 @@ phases:
       - docker push 461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest
       - echo Writing image definitions file...
       - echo Updating ArgoCD GitOps repository...
+      - chmod +x update_argocd.sh
       - ./update_argocd.sh  
        
 artifacts:
