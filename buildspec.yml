@@ -26,6 +26,7 @@ phases:
       - git add deployment.yaml
       - git commit -m "Updated image to latest"
       - git push origin main
+       
 artifacts:
   files:
     - imagedefinitions.json
