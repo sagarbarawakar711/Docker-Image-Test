@@ -4,18 +4,18 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 461655781674.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 461655781674.dkr.ecr.ca-central-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t argocd-repo . 
-      - docker tag argocd-repo:latest 461655781674.dkr.ecr.us-east-1.amazonaws.com/argocd-repo:latest
+      - docker build -t argocd-repo .
+      - docker tag argocd-repo:latest 461655781674.dkr.ecr.ca-central-1.amazonaws.com/argocd-repo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 461655781674.dkr.ecr.us-east-1.amazonaws.com/argocd-repo:latest
+      - docker push 461655781674.dkr.ecr.ca-central-1.amazonaws.com/argocd-repo:latest
       - echo Writing image definitions file...
       - echo Updating ArgoCD GitOps repository...
       - chmod +x update_argocd.sh
