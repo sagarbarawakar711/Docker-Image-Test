@@ -11,7 +11,7 @@ phases:
       - echo Building the Docker image...
       - docker build -t argocd-repo .
       - BUILD_ID=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 7) 
-      - echo "Building with Build ID: $BUILD_ID"
+      - echo "Building with Build ID $BUILD_ID"
       - docker tag argocd-repo:latest 461655781674.dkr.ecr.ca-central-1.amazonaws.com/argocd-repo:$BUILD_ID
       
   post_build:
