@@ -2,7 +2,7 @@
 
 
 REPO_URL="https://github.com/sagarbarawakar711/ArgoCD-Repo.git"
-IMAGE_TAG="461655781674.dkr.ecr.ap-south-1.amazonaws.com/argocd-repo:latest"
+IMAGE_TAG="461655781674.dkr.ecr.ca-central-1.amazonaws.com/argocd-repo:$BUILD_ID"
 SECRET_NAME="test/gitrepo"
 
 # Retrieve GitHub Username and Token from AWS Secrets Manager
