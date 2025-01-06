@@ -17,5 +17,3 @@ if [ ! -z "$IMAGES_TO_DELETE" ]; then
 else
     echo "No images to delete."
 fi
-
-
