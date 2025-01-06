@@ -14,3 +14,8 @@ REGION="ca-central-1"
              else
                  echo "No images to delete."
                  fi               
+
+
+
+
+
