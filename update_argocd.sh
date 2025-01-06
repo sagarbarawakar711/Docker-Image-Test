@@ -12,6 +12,9 @@ SECRET_JSON=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME --que
 # # Extract GitHub username and token from the secret JSON
 GITHUB_USERNAME=$(echo $SECRET_JSON | jq -r '.GITHUB_USERNAME')
 GITHUB_TOKEN=$(echo $SECRET_JSON | jq -r '.GITHUB_TOKEN')
+
+echo $GITHUB_USERNAME
+echo $GITHUB_TOKEN
 #
 # # Clone the ArgoCD repository
 git clone $REPO_URL
