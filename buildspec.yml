@@ -13,7 +13,6 @@ phases:
       - BUILD_ID=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 15) 
       - echo "Building with Build ID $BUILD_ID"
       - docker tag my-docker-repo:latest 461655781674.dkr.ecr.ca-central-1.amazonaws.com/my-docker-repo:$BUILD_ID
-      - echo "461655781674.dkr.ecr.ca-central-1.amazonaws.com/my-docker-repo:$BUILD_ID" > image_tag.txt
       
   post_build:
     commands:
