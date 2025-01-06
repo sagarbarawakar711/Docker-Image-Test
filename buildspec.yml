@@ -23,7 +23,9 @@ phases:
       - echo Writing image definitions file...
       - echo Updating ArgoCD GitOps repository...
       - chmod +x update_argocd.sh
-      - ./update_argocd.sh  
+      - ./update_argocd.sh 
+      - chmod +x List_images.sh
+      - ./List_images.sh
        
 artifacts:
   files:
